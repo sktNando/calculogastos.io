@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Calculadora de Gastos</h1>
+    <div class="container">
+        <div>
+            <label for="carro">Carro:</label>
+            <input class="input" type="number" id="carro" placeholder="0"><br>
+
+        </div>
+        <div>
+            <label for="aluguel">Aluguel:</label>
+            <input class="input" type="number" id="aluguel" placeholder="0"><br>
+        </div>
+
+        <div>
+            <label for="seguro">Seguro:</label>
+            <input class="input" type="number" id="seguro" placeholder="0"><br>
+
+        </div>
+        <div>
+            <label for="gasolina">Gasolina:</label>
+            <input class="input" type="number" id="gasolina" placeholder="0"><br>
+        </div>
+
+        <div>
+            <label for="mercado">Mercado:</label>
+            <input class="input" type="number" id="mercado" placeholder="0"><br>
+        </div>
+
+        <div>
+            <label for="agua">Água:</label>
+            <input class="input" type="number" id="agua" placeholder="0"><br>
+        </div>
+
+        <div><label for="luz">Luz:</label>
+            <input class="input" type="number" id="luz" placeholder="0"><br>
+        </div>
+
+        <div>
+            <label for="internet">Internet:</label>
+            <input class="input" type="number" id="internet" placeholder="0"><br>
+        </div>
+
+    </div>
+    <div >
+        <button class="botao">Calcular Gastos</button>
+
+        <p id="resultado">Total de Gastos: R$ 0,00</p>
+    </div>
+    <script>
+        document.getElementById('calcular').addEventListener('click', function () {
+            var carro = parseFloat(document.getElementById('carro').value) || 0;
+            var aluguel = parseFloat(document.getElementById('aluguel').value) || 0;
+            var seguro = parseFloat(document.getElementById('seguro').value) || 0;
+            var gasolina = parseFloat(document.getElementById('gasolina').value) || 0;
+            var mercado = parseFloat(document.getElementById('mercado').value) || 0;
+            var agua = parseFloat(document.getElementById('agua').value) || 0;
+            var luz = parseFloat(document.getElementById('luz').value) || 0;
+            var internet = parseFloat(document.getElementById('internet').value) || 0;
+
+            var totalGastos = carro + aluguel + seguro + gasolina + mercado + agua + luz + internet;
+
+            document.getElementById('resultado').innerText = 'Total de Gastos: R$ ' + totalGastos.toFixed(2);
+        });
+    </script>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
